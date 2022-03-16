@@ -26,7 +26,7 @@ def preprocessing(res) :
 
     tmp = ''
     cnt = 1
-    while 1 :
+    while 1 : # 괄호 갯수 세서 괄호갯수 같으면 json파일 끝난걸로 확인하고 끝냄
         if cnt == 0 :
             break
         else :
@@ -42,6 +42,6 @@ def preprocessing(res) :
 
 if __name__ == '__main__':
     raw_data = collect_http_packet()
-    res = preprocessing(raw_data)
+    res = preprocessing(raw_data) # TODO: 데이터 전처리가 완벽히 안됐음 앞 공백 4자리가 문제인 것 같다.
     print(res)
     # json_objcet = json.loads(res)
